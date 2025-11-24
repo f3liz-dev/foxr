@@ -2,6 +2,9 @@
 
 [![npm](https://flat.badgen.net/npm/v/foxr)](https://www.npmjs.com/package/foxr) [![install size](https://flat.badgen.net/packagephobia/install/foxr)](https://packagephobia.now.sh/result?p=foxr) [![tests](https://flat.badgen.net/travis/deepsweet/foxr/master?label=tests)](https://travis-ci.org/deepsweet/foxr) [![coverage](https://flat.badgen.net/codecov/c/github/deepsweet/foxr/master)](https://codecov.io/github/deepsweet/foxr)
 
+> [!CAUTION]
+> This is unofficial fork.
+
 Node.js API to control Firefox.
 
 <img src="logo.svg" width="110" height="110" align="right" alt="logo"/>
