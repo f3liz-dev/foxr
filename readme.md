@@ -1,6 +1,6 @@
 # foxr
 
-[![JSR](https://jsr.io/badges/@f3liz/foxr>)](https://jsr.io/@f3liz/foxr>) [![tests](https://flat.badgen.net/travis/deepsweet/foxr/master?label=tests)](https://travis-ci.org/deepsweet/foxr) [![coverage](https://flat.badgen.net/codecov/c/github/deepsweet/foxr/master)](https://codecov.io/github/deepsweet/foxr)
+[![JSR](https://jsr.io/badges/@f3liz/foxr)](https://jsr.io/@f3liz/foxr) [![tests](https://flat.badgen.net/travis/deepsweet/foxr/master?label=tests)](https://travis-ci.org/deepsweet/foxr) [![coverage](https://flat.badgen.net/codecov/c/github/deepsweet/foxr/master)](https://codecov.io/github/deepsweet/foxr)
 
 > [!CAUTION]
 > This is unofficial fork.
