@@ -36,7 +36,7 @@ class Browser extends EventEmitter {
       'WebDriver:ExecuteScript',
       {
         script: `let [pref, defaultBranch] = arguments;
-          Cu.import('resource://gre/modules/Preferences.jsm');
+          const { Preferences } = ChromeUtils.importESModule('resource://gre/modules/Preferences.sys.mjs');
 
           let prefs = new Preferences({defaultBranch});
 
@@ -98,7 +98,7 @@ class Browser extends EventEmitter {
 
     const error = await this._send('WebDriver:ExecuteScript', {
       script: `let [pref, value, defaultBranch] = arguments;
-          Cu.import('resource://gre/modules/Preferences.jsm');
+          const { Preferences } = ChromeUtils.importESModule('resource://gre/modules/Preferences.sys.mjs');
 
           let prefs = new Preferences({defaultBranch});
 

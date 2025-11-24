@@ -92,7 +92,7 @@ class Foxr {
       throw new Error('`executablePath` option is required, Foxr doesn\'t download Firefox automatically')
     }
 
-    const args = ['-marionette', '-safe-mode', '-no-remote']
+    const args = ['-marionette', '-safe-mode', '-no-remote', '-remote-allow-system-access']
 
     if (options.headless === true) {
       args.push('-headless')
