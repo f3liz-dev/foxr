@@ -51,9 +51,11 @@ import foxr from 'foxr'
 ## Install
 
 ```sh
-yarn add --dev foxr
+pnpm add -D foxr
 # or
 npm install --save-dev foxr
+# or
+yarn add --dev foxr
 ```
 
 ## API

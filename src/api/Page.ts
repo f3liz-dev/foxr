@@ -1,9 +1,9 @@
 /* eslint-disable no-use-before-define */
 import { EventEmitter } from 'events'
 import { TJsonValue } from 'typeon'
-import { pWriteFile, mapEvaluateArgs } from '../utils'
-import Browser from './Browser'
-import ElementHandle from './ElementHandle'
+import { pWriteFile, mapEvaluateArgs } from '../utils.js'
+import Browser from './Browser.js'
+import ElementHandle from './ElementHandle.js'
 import {
   TEvaluateResult,
   TStringifiableFunction,
@@ -12,8 +12,8 @@ import {
   TEvaluateArg,
   TJSHandleId,
   TSend
-} from './types'
-import JSHandle from './JSHandle'
+} from './types.js'
+import JSHandle from './JSHandle.js'
 
 const cache = new Map<string, Page>()
 
@@ -54,7 +54,7 @@ class Page extends EventEmitter {
         send: this._send
       })
     } catch (err) {
-      if (err.message.startsWith('Unable to locate element')) {
+      if (err instanceof Error && err.message.startsWith('Unable to locate element')) {
         return null
       }
 

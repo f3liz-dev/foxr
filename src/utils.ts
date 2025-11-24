@@ -1,8 +1,8 @@
 import { writeFile } from 'fs'
 import { promisify } from 'util'
 import { Socket } from 'net'
-import { TEvaluateArg, TJSHandleId } from './api/types'
-import JSHandle from './api/JSHandle'
+import { TEvaluateArg, TJSHandleId } from './api/types.js'
+import JSHandle from './api/JSHandle.js'
 
 export const pWriteFile = promisify(writeFile)
 
@@ -23,7 +23,7 @@ export const mapEvaluateArgs = (args: TEvaluateArg[]) => args.map((arg) => {
 export const getElementId = (JSHandleId: TJSHandleId) => Object.values(JSHandleId)[0]
 
 // ESLint fails to parse this written as arrow function
-export function hasKey <T> (obj: T, key: any): key is keyof T {
+export function hasKey <T extends object> (obj: T, key: any): key is keyof T {
   return key in obj
 }
 

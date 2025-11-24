@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'
-import Page from './Page'
-import { TJSHandleId, TSend } from './types'
-import { getElementId } from '../utils'
+import Page from './Page.js'
+import { TJSHandleId, TSend } from './types.js'
+import { getElementId } from '../utils.js'
 
 const cache = new Map<string, JSHandle>()
 

@@ -1,8 +1,8 @@
 import { EventEmitter } from 'events'
 import { Socket } from 'net'
 import { TJsonArray, TJsonMap, TJsonValue } from 'typeon'
-import FoxrError from './Error'
-import { createParseStream, parse, stringify } from './json-protocol'
+import FoxrError from './Error.js'
+import { createParseStream, parse, stringify } from './json-protocol.js'
 
 const CONNECTION_TIMEOUT = 10000
 
@@ -50,7 +50,7 @@ class Marionette extends EventEmitter {
 
             if (data.applicationType === 'gecko') {
               if (data.marionetteProtocol === 3) {
-                return resolve()
+                return resolve(undefined)
               }
 
               return rejectAndDestroy(new FoxrError('Foxr works only with Marionette protocol v3'))

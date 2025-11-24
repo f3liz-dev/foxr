@@ -1,8 +1,8 @@
-import Foxr from './api/Foxr'
-import Browser from './api/Browser'
-import Page from './api/Page'
-import JSHandle from './api/JSHandle'
-import ElementHandle from './api/ElementHandle'
+import Foxr from './api/Foxr.js'
+import Browser from './api/Browser.js'
+import Page from './api/Page.js'
+import JSHandle from './api/JSHandle.js'
+import ElementHandle from './api/ElementHandle.js'
 
 export default new Foxr()
 
