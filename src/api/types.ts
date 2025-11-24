@@ -1,7 +1,7 @@
 import { TJsonValue } from 'typeon'
-import JSHandle from './JSHandle'
-import ElementHandle from './ElementHandle'
-import Marionette from '../Marionette'
+import JSHandle from './JSHandle.js'
+import ElementHandle from './ElementHandle.js'
+import Marionette from '../Marionette.js'
 
 export type TStringifiableFunction = (...args: Array<TJsonValue | Element>) => TJsonValue | Promise<TJsonValue> | void
 

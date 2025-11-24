@@ -2,11 +2,16 @@
   "compilerOptions": {
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "target": "ES2020",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "outDir": "build",
     "pretty": true,
     "lib": ["esnext", "dom"],
-    "moduleResolution": "node",
     "typeRoots": [ "types/", "node_modules/@types/" ]
   },
-  "exclude": ["node_modules/", "coverage/", "build/", "tmp/"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/", "coverage/", "build/", "tmp/", "test/"]
 }

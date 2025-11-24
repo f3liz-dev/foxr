@@ -1,11 +1,11 @@
 import { EventEmitter } from 'events'
-import Page from './Page'
+import Page from './Page.js'
 import {
   TSend,
   TInstallAddonResult,
   Context,
   TGetPrefResult
-} from './types'
+} from './types.js'
 
 class Browser extends EventEmitter {
   private _send: TSend

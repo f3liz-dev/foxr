@@ -1,8 +1,8 @@
-import Page from './Page'
-import { TJSHandleId, TClickOptions, TMouseButton, TSend } from './types'
-import JSHandle from './JSHandle'
-import { pWriteFile, MOUSE_BUTTON, hasKey, getElementId } from '../utils'
-import KEYS from '../keys'
+import Page from './Page.js'
+import { TJSHandleId, TClickOptions, TMouseButton, TSend } from './types.js'
+import JSHandle from './JSHandle.js'
+import { pWriteFile, MOUSE_BUTTON, hasKey, getElementId } from '../utils.js'
+import KEYS from '../keys.js'
 
 class ElementHandle extends JSHandle {
   private _page: Page
@@ -38,7 +38,7 @@ class ElementHandle extends JSHandle {
         send: this._send
       })
     } catch (err) {
-      if (err.message.startsWith('Unable to locate element')) {
+      if (err instanceof Error && err.message.startsWith('Unable to locate element')) {
         return null
       }
 

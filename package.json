@@ -7,18 +7,23 @@
   "repository": "f3liz-dev/foxr",
   "author": "Kir Belevich <kir@belevi.ch> (https://twitter.com/deepsweet)",
   "license": "MIT",
+  "type": "module",
   "files": [
     "build/"
   ],
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "engines": {
-    "node": ">=8.6.0"
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --loader tsx --test test/**/*.ts",
+    "clean": "rm -rf build"
   },
   "dependencies": {
-    "@babel/runtime": "^7.28.4",
-    "execa": "^5.1.1",
-    "signal-exit": "^3.0.7",
+    "execa": "^9.6.0",
+    "signal-exit": "^4.1.0",
     "typeon": "^2.0.0"
   },
   "devDependencies": {
@@ -27,7 +32,7 @@
     "@types/blue-tape": "^0.1.36",
     "@types/node": "^24.10.1",
     "blue-tape": "^1.0.0",
-    "mocku": "^0.5.0",
+    "mocku": "^1.0.0",
     "spyfn": "^2.0.0",
     "typescript": "^5.9.3"
   },

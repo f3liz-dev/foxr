@@ -1,11 +1,10 @@
 /* eslint-disable no-use-before-define */
-import execa from 'execa'
-// @ts-ignore
-import onExit from 'signal-exit'
-import Marionette from '../Marionette'
-import Browser from './Browser'
-import { waitForPort } from '../utils'
-import { TSend } from './types'
+import { execa } from 'execa'
+import { onExit } from 'signal-exit'
+import Marionette from '../Marionette.js'
+import Browser from './Browser.js'
+import { waitForPort } from '../utils.js'
+import { TSend } from './types.js'
 
 const DEFAULT_HOST = 'localhost'
 const DEFAULT_PORT = 2828
