@@ -13,7 +13,7 @@ import {
   TJSHandleId,
   TSend
 } from './types.js'
-import JSHandle from './JSHandle'
+import JSHandle from './JSHandle.js'
 
 const cache = new Map<string, Page>()
 
