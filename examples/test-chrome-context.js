@@ -23,8 +23,16 @@ const foxr = require('../build/index.js').default;
     
     // Launch Firefox with our own binary
     console.log('\n1. Launching Firefox with -remote-allow-system-access...');
+    
+    // Try to find Firefox in common locations
+    const firefoxPath = process.env.FIREFOX_PATH || 
+                        process.env.FIREFOX_BIN || 
+                        '/usr/bin/firefox';
+    
+    console.log(`   Using Firefox at: ${firefoxPath}`);
+    
     browser = await foxr.launch({
-      executablePath: '/usr/bin/firefox',
+      executablePath: firefoxPath,
       headless: true
     });
     console.log('   ✓ Firefox launched successfully');
